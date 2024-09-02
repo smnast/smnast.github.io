@@ -1,7 +1,9 @@
 const AboutSection = () => {
-  return (
-    <div>AboutSection</div>
-  )
+    return (
+        <>
+            about
+        </>
+    )
 }
 
 export default AboutSection

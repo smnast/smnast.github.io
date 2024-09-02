@@ -1,7 +1,9 @@
 const ProjectsSection = () => {
-  return (
-    <div>ProjectsSection</div>
-  )
+    return (
+        <>
+            projects
+        </>
+    )
 }
 
 export default ProjectsSection

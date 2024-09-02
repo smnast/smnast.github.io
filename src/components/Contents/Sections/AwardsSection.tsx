@@ -1,7 +1,9 @@
 const AwardsSection = () => {
-  return (
-    <div>AwardsSection</div>
-  )
+    return (
+        <>
+            awards
+        </>
+    )
 }
 
 export default AwardsSection
