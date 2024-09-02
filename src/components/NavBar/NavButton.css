@@ -1,7 +1,18 @@
 .NavButton {
     cursor: pointer;
+    position: relative;
 }
 
-.selected {
-    text-decoration: underline;
+.decoration {
+    position: absolute;
+    width: 0%;
+    height: 0.1em;
+    left: 50%;
+    background: currentColor;
+    transition: all 0.1s;
+}
+
+.selected .decoration {
+    left: 0;
+    width: 100%;
 }

@@ -8,7 +8,10 @@ interface NavButtonProps {
 
 const NavButton = ({ name, onClick, selected }: NavButtonProps) => {
     return (
-        <div className={'NavButton' + (selected ? ' selected' : '')} onClick={onClick}>{name}</div>
+        <div className={'NavButton' + (selected ? ' selected' : '')} onClick={onClick}>
+            {name}
+            <div className="decoration" />
+        </div>
     );
 }
 
