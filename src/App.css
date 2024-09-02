@@ -1,6 +1,13 @@
+.App {
+    margin-bottom: 2vh;
+}
+
+.header {
+    margin-bottom: 3vh;
+}
+
 .App, .header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 3vh;
 }
