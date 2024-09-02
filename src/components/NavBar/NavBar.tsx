@@ -2,14 +2,21 @@ import { useState } from 'react';
 import './NavBar.css';
 import NavButton from './NavButton';
 
-const NavBar = () => {
-    const names = ['About', 'Projects', 'Awards', 'Contact'];
+interface NavBarProps {
+    sectionNames: string[];
+    setSectionName: (name: string) => void;
+}
+
+const NavBar = ({ sectionNames, setSectionName } : NavBarProps) => {
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     return (
         <div className="NavBar">
-            {names.map((name, index) => (
-                <NavButton name={name} onClick={() => setSelectedIndex(index)} selected={selectedIndex == index} />
+            {sectionNames.map((name, index) => (
+                <NavButton name={name} key={name} onClick={() => {
+                        setSectionName(name);
+                        setSelectedIndex(index);
+                    }} selected={selectedIndex == index} />
             ))}
         </div>
     );

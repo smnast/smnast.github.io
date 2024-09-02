@@ -1,0 +1,8 @@
+.Section {
+    position: absolute;
+    opacity: 0%;
+}
+
+.Section.visible {
+    opacity: 100%;
+}
