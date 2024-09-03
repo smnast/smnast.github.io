@@ -11,9 +11,19 @@
     display: flex;
 }
 
+img {
+    width: 100%;
+}
+
 .float-right {
+    width: auto;
     float: right;
     margin-top: 1em;
     margin-bottom: 1em;
     margin-left: 1em;
+}
+
+h1 {
+    margin-top: 2em;
+    margin-bottom: 0px;
 }
