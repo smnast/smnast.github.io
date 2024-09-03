@@ -56,6 +56,8 @@ const AboutSection = () => {
             <h1>Frameworks and Tools</h1>
             <div>
                 <p>I have used <b>Git</b> and <b>Github</b> extensively for my own projects and for contributing to other open source software.</p>
+                <p>For building in C++, I use often <b>CMake</b>, and I know how to write and work with CMakeLists files.</p>
+                <p>I have used <b>Doctest</b> in some of my projects.</p>
                 <p>For web development, <b>React</b> is my framework/library of choice, due to its popularity.</p>
                 <p>
                     In Python, I enjoy using <b>PyTorch</b> for machine learning, and <b>NumPy</b> for general data science.
@@ -64,7 +66,7 @@ const AboutSection = () => {
                 <p>I have worked with <b>OpenGL</b> for 3D rendering projects.</p>
                 <p>
                     I run <b>Linux</b> (currently using Void; have used Ubuntu, OpenSUSE and Arch in the past) on my daily driver laptop, giving me plenty of experience using the terminal for problem-solving,
-                    customization and automation.
+                    customization and automation. Thus, I can do some <b>Bash</b>/<b>ZSH</b> scripting.
                 </p>
                 <p>
                     And, of course, I am always looking for new technologies to learn and experiment with.
