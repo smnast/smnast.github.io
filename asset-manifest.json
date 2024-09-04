@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f25cf2ce.css",
-    "main.js": "/static/js/main.ee336f86.js",
+    "main.js": "/static/js/main.2710ed1a.js",
     "react-syntax-highlighter/refractor-core-import.js": "/static/js/react-syntax-highlighter/refractor-core-import.918ddd3b.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js": "/static/js/react-syntax-highlighter_languages_refractor_abap.d3f23d2b.chunk.js",
     "react-syntax-highlighter_languages_refractor_abnf.js": "/static/js/react-syntax-highlighter_languages_refractor_abnf.74dd4f5d.chunk.js",
@@ -284,13 +284,14 @@
     "static/media/34300A.jpg": "/static/media/34300A.5db4cd6ba50d5786a23b.jpg",
     "static/media/huemaster_result.png": "/static/media/huemaster_result.6d05aaa1fd34e8f96434.png",
     "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
-    "static/media/robotica.png": "/static/media/robotica.250be1fa9eadb92c33a1.png",
     "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
     "static/media/euclid_medal.jpg": "/static/media/euclid_medal.b982f8a926cd061401bd.jpg",
     "static/media/icpc_tshirt.jpg": "/static/media/icpc_tshirt.9a7d926253b76eb2091b.jpg",
+    "static/media/robotica_snap.png": "/static/media/robotica_snap.a08ccd25b5f8be6ceb18.png",
+    "static/media/robotica_group.png": "/static/media/robotica_group.5dc28266e34b7161dbd4.png",
     "index.html": "/index.html",
     "main.f25cf2ce.css.map": "/static/css/main.f25cf2ce.css.map",
-    "main.ee336f86.js.map": "/static/js/main.ee336f86.js.map",
+    "main.2710ed1a.js.map": "/static/js/main.2710ed1a.js.map",
     "refractor-core-import.918ddd3b.chunk.js.map": "/static/js/react-syntax-highlighter/refractor-core-import.918ddd3b.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.d3f23d2b.chunk.js.map": "/static/js/react-syntax-highlighter_languages_refractor_abap.d3f23d2b.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abnf.74dd4f5d.chunk.js.map": "/static/js/react-syntax-highlighter_languages_refractor_abnf.74dd4f5d.chunk.js.map",
@@ -573,6 +574,6 @@
   },
   "entrypoints": [
     "static/css/main.f25cf2ce.css",
-    "static/js/main.ee336f86.js"
+    "static/js/main.2710ed1a.js"
   ]
 }
