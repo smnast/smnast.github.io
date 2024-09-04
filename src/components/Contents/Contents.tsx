@@ -12,10 +12,10 @@ interface ContentsProps {
 const Contents = ({ sectionName }: ContentsProps) => {
     return (
         <div className="Contents">
-            <Section visible={sectionName == 'About'}><AboutSection /></Section>
-            <Section visible={sectionName == 'Projects'}><ProjectsSection /></Section>
-            <Section visible={sectionName == 'Awards'}><AwardsSection /></Section>
-            <Section visible={sectionName == 'Contact'}><ContactSection /></Section>
+            <Section visible={sectionName === 'About'}><AboutSection /></Section>
+            <Section visible={sectionName === 'Projects'}><ProjectsSection /></Section>
+            <Section visible={sectionName === 'Awards'}><AwardsSection /></Section>
+            <Section visible={sectionName === 'Contact'}><ContactSection /></Section>
         </div>
     );
 }

@@ -16,7 +16,7 @@ const NavBar = ({ sectionNames, setSectionName } : NavBarProps) => {
                 <NavButton name={name} key={name} onClick={() => {
                         setSectionName(name);
                         setSelectedIndex(index);
-                    }} selected={selectedIndex == index} />
+                    }} selected={selectedIndex === index} />
             ))}
         </div>
     );
