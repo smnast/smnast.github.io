@@ -33,7 +33,7 @@ const AwardsSection = () => {
                 <p>
                     In the end, I placed 113-th out of 2151 contestants across the world, securing my T-shirt prize.
                     Not only did I gain a T-shirt (maybe I would actually wear it if it wasn't bright white!), but
-                    I also learned a lot about motivation and what I can accomplish with my eyes set on a target.
+                    I also learned a lot about motivation and what I can accomplish when I have an ambitious goal.
                 </p>
             </div>
         </>
