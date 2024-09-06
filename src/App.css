@@ -2,11 +2,11 @@
     margin-bottom: 2vh;
 }
 
-.header {
+.App > .header {
     margin-bottom: 3vh;
 }
 
-.App, .header {
+.App, .App > .header {
     display: flex;
     flex-direction: column;
     align-items: center;
