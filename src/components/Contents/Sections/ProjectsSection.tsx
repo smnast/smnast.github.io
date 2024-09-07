@@ -175,10 +175,10 @@ background: $$BACKGROUND.alpha(-20)$$`;
                         <p>
                             Robotica also includes automatic grouping of parts, built upon a system of "fasteners", "inserts", and "holes":
                         </p>
+                        <img src={RoboticaGroup} alt="A C-channel automatically grouped with connected parts." />
                         <p>
                             The main improvements of Robotica over Protobot include: significantly better performance (often 10x the framerate), faster load times, more parts, more consistent automatic grouping, manual grouping, consistent saving/loading functionality, and a <i>lot</i> more settings.
                         </p>
-                        <img src={RoboticaGroup} alt="A C-channel automatically grouped with connected parts." />
                         <p>
                             Several improvements could be made to the code design. For instance, separating the long <code>Control.cs</code> class would help keep the control logic cleaner and maintainable. The part system could also be more abstracted to allow for easily adding new parts, without the need to edit multiple files to introduce one part. Without these improvements, the project is difficult to maintain and continue.
                         </p>
