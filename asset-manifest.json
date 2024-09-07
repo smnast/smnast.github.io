@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.250cf2de.css",
-    "main.js": "/static/js/main.2653a9d3.js",
+    "main.js": "/static/js/main.a5cce8a0.js",
     "react-syntax-highlighter/refractor-core-import.js": "/static/js/react-syntax-highlighter/refractor-core-import.918ddd3b.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js": "/static/js/react-syntax-highlighter_languages_refractor_abap.d3f23d2b.chunk.js",
     "react-syntax-highlighter_languages_refractor_abnf.js": "/static/js/react-syntax-highlighter_languages_refractor_abnf.74dd4f5d.chunk.js",
@@ -291,7 +291,7 @@
     "static/media/robotica_group.png": "/static/media/robotica_group.5dc28266e34b7161dbd4.png",
     "index.html": "/index.html",
     "main.250cf2de.css.map": "/static/css/main.250cf2de.css.map",
-    "main.2653a9d3.js.map": "/static/js/main.2653a9d3.js.map",
+    "main.a5cce8a0.js.map": "/static/js/main.a5cce8a0.js.map",
     "refractor-core-import.918ddd3b.chunk.js.map": "/static/js/react-syntax-highlighter/refractor-core-import.918ddd3b.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.d3f23d2b.chunk.js.map": "/static/js/react-syntax-highlighter_languages_refractor_abap.d3f23d2b.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abnf.74dd4f5d.chunk.js.map": "/static/js/react-syntax-highlighter_languages_refractor_abnf.74dd4f5d.chunk.js.map",
@@ -574,6 +574,6 @@
   },
   "entrypoints": [
     "static/css/main.250cf2de.css",
-    "static/js/main.2653a9d3.js"
+    "static/js/main.a5cce8a0.js"
   ]
 }
