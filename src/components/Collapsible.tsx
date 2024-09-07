@@ -10,7 +10,7 @@ const Collapsible = ({ description, content }: CollapsibleProps) => {
     const [expanded, setExpanded] = useState(false);
 
     return (
-        <div className="Collapsible">
+        <div className="Collapsible panel">
             <div className="header">
                 <div className="description">
                     {description}

@@ -37,41 +37,45 @@ const AboutSection = () => {
             <div>
                 <p><b>Hello! I am Simon Ashton, {article} {years}-year-old programmer living in Canada.</b></p>
             </div>
+            <div className="panel">
             <h1>Languages</h1>
-            <div>
-                <p>
-                    Sorted by my familiarity with the language (in descending order), here are the top {languages.length} programming
-                    languages that I have used:
-                </p>
-                <ol>
-                    {languages.map((language) => (
-                        <li key={language}>{language}</li>
-                    ))}
-                </ol>
-                <p>
-                    However, I love learning and creating new languages, and can usually feel familiar with a new programming
-                    language within a few hours.
-                </p>
+                <div>
+                    <p>
+                        Sorted by my familiarity with the language (in descending order), here are the top {languages.length} programming
+                        languages that I have used:
+                    </p>
+                    <ol>
+                        {languages.map((language) => (
+                            <li key={language}>{language}</li>
+                        ))}
+                    </ol>
+                    <p>
+                        However, I love learning and creating new languages, and can usually feel familiar with a new programming
+                        language within a few hours.
+                    </p>
+                </div>
             </div>
-            <h1>Frameworks and Tools</h1>
-            <div>
-                <p>I have used <b>Git</b> and <b>Github</b> extensively for my own projects and for contributing to other open source software.</p>
-                <p>For building in C++, I use often <b>CMake</b>, and know how to work with CMakeLists files.</p>
-                <p>I have used <b>Doctest</b> in projects for unit testing.</p>
-                <p>For web development, I have experience using <b>React</b> (for instance, this website).</p>
-                <p>
-                    In Python, I enjoy using <b>PyTorch</b> for machine learning, and <b>NumPy</b> for general data science.
-                    I am familiar with other libraries, including <b>Pandas</b>, <b>Scikit-learn</b> and <b>OpenCV</b>.
-                </p>
-                <p>I have used <b>OpenGL</b> for many 3D rendering projects, and can write <b>GLSL</b> shaders.</p>
-                <p>
-                    I run <b>Linux</b> (currently using Void; have used Ubuntu, OpenSUSE and Arch in the past) on my daily driver laptop, giving me plenty of experience using the terminal for problem-solving,
-                    customization and automation. Thus, I can do some <b>Bash</b>/<b>ZSH</b> scripting.
-                </p>
-                <p>
-                    And, of course, I am always looking for new technologies to learn and experiment with.
-                    I will happily learn whatever I need in order to seamlessly integrate into new projects.
-                </p>
+            <div className="panel">
+                <h1>Frameworks and Tools</h1>
+                <div>
+                    <p>I have used <b>Git</b> and <b>Github</b> extensively for my own projects and for contributing to other open source software.</p>
+                    <p>For building in C++, I use often <b>CMake</b>, and know how to work with CMakeLists files.</p>
+                    <p>I have used <b>Doctest</b> in projects for unit testing.</p>
+                    <p>For web development, I have experience using <b>React</b> (for instance, this website).</p>
+                    <p>
+                        In Python, I enjoy using <b>PyTorch</b> for machine learning, and <b>NumPy</b> for general data science.
+                        I am familiar with other libraries, including <b>Pandas</b>, <b>Scikit-learn</b> and <b>OpenCV</b>.
+                    </p>
+                    <p>I have used <b>OpenGL</b> for many 3D rendering projects, and can write <b>GLSL</b> shaders.</p>
+                    <p>
+                        I run <b>Linux</b> (currently using Void; have used Ubuntu, OpenSUSE and Arch in the past) on my daily driver laptop, giving me plenty of experience using the terminal for problem-solving,
+                        customization and automation. Thus, I can do some <b>Bash</b>/<b>ZSH</b> scripting.
+                    </p>
+                    <p>
+                        And, of course, I am always looking for new technologies to learn and experiment with.
+                        I will happily learn whatever I need in order to seamlessly integrate into new projects.
+                    </p>
+                </div>
             </div>
         </>
     );
