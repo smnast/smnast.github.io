@@ -14,14 +14,10 @@ const AwardsSection = () => {
                 content={
                     <>
                         <div>
-                            <img className="float-right" src={EuclidMedalImage} alt="Euclid School Champion Medal" height="300" />
                             <p>
-                                I achieved the highest score at my school in the 2024 Euclid CEMC math contest.
-                                There was tough competition at my school that year. While one contestant was writing
-                                his first contest, many had years of experience and training in extracurricular programs.
-                                I was able to outperform my classmates despite it being my first year of competition
-                                by focusing on developing my problem-solving skills, rather than memorizing a vast quantity
-                                of information.
+                                Award recognizing the highest score in the 2024 Euclid CEMC Math contest at my high school.
+                                I was able to achieve the highest performance despite it being my first year in competitive
+                                mathematics by focusing on my problem-solving skills.
                             </p>
                         </div>
                     </>
@@ -37,21 +33,16 @@ const AwardsSection = () => {
                 content={
                     <>
                         <div>
-                            <img className="float-right" src={ICPCTShirtImage} alt="ICPC T-shirt" height="300" />
                             <p>
-                                In May 2024, the "2023 Post World Finals Online ICPC Challenge powered by Huawei",
-                                was held on Codeforces. I decided to participate, and had my eye on this commemorative
-                                T-shirt, offered to the top 200 contestants on the leaderboard.
+                                The "2023 Post World Finals Online ICPC Challenge powered by Huawei" was held on Codeforces
+                                in May 2024. The top 200 participants received a T-shirt prize.
                             </p>
                             <p>
-                                I spent countless hours over the following two weeks implementing and (painstakingly) debugging
-                                my solution to the contest's problem. The score was based on a range of factors,
-                                including datatype efficiency and accuracy.
+                                There was a singular problem, in which contestants where graded based on their solution's
+                                accuracy, and efficiency of datatype and memory usage.
                             </p>
                             <p>
-                                In the end, I placed 113-th out of 2151 contestants across the world, securing my T-shirt prize.
-                                Not only did I gain a T-shirt (maybe I would actually wear it if it wasn't bright white!), but
-                                I also learned a lot about motivation and what I can accomplish when I have an ambitious goal.
+                                I placed 113-th out of 2151 international contestants, receiving the T-shirt prize.
                             </p>
                         </div>
                     </>
