@@ -24,7 +24,7 @@ const ContactSection = () => {
                         <i className="bi bi-github"></i> - <a href="https://github.com/smnast/">smnast</a> (Simon Ashton)
                     </p>
                     <p>
-                        <i className="bi bi-discord"></i> - mrpersondev (MrPerson)
+                        <i className="bi bi-discord"></i> - smnast (Simon)
                     </p>
                     <p>
                         <i className="bi bi-youtube"></i> - <a href="https://youtube.com/@smnast">@smnast</a> (Simon Ashton)
