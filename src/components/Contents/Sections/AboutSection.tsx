@@ -60,7 +60,10 @@ const AboutSection = () => {
                 <div>
                     <p>I have used <b>Git</b> and <b>Github</b> extensively for my own projects and for contributing to other open source software.</p>
                     <p>For building in C++, I use often <b>CMake</b>, and know how to work with CMakeLists files.</p>
-                    <p>I have used <b>Doctest</b> in projects for unit testing.</p>
+                    <p>
+                        I have unit testing experience
+                        with <b>doctest</b>, <b>GoogleTest</b>, <b>PyUnit</b>, <b>pytest</b> and <b>Jest</b>.
+                    </p>
                     <p>For web development, I have experience using <b>React</b> (for instance, this website).</p>
                     <p>
                         In Python, I enjoy using <b>PyTorch</b> for machine learning, and <b>NumPy</b> for general data science.
