@@ -1,22 +1,22 @@
-.App {
-    margin-bottom: 2vh;
+html, body {
+    overflow: hidden;
+    height: 100%;
 }
 
-.App > .header {
-    margin-bottom: 3vh;
+body {
+    background-color: #008080;
+    font-family: Tahoma, sans-serif;
+    position: relative;
+    height: 100%;
 }
 
-.App, .App > .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.link {
+    cursor: pointer;
+    color: #0029F5;
+    text-decoration: underline;
 }
 
-.panel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
+.icon {
+    display: inline-block;
+    vertical-align: middle;
 }
