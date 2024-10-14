@@ -26,7 +26,7 @@ const Window: React.FC<WindowProps> = ({ title, windowWidth, windowHeight, child
         const x = (window.innerWidth - currentWidth) / 2 + relativePosition.current.x;
         let y = (window.innerHeight - currentHeight) / 2 + relativePosition.current.y;
 
-        const titleBarHeight = 30; // Adjust if needed
+        const titleBarHeight = 35; // Adjust if needed
         if (y < 0) y = 0;
         else if (y > window.innerHeight - titleBarHeight) {
             y = window.innerHeight - titleBarHeight;
@@ -102,6 +102,7 @@ const Window: React.FC<WindowProps> = ({ title, windowWidth, windowHeight, child
                 x: newClientX - offset.current.x,
                 y: newClientY - offset.current.y,
             });
+            updatePosition();
         },
         [isDragging, currentWidth, currentHeight]
     );
@@ -120,6 +121,7 @@ const Window: React.FC<WindowProps> = ({ title, windowWidth, windowHeight, child
                 x: newClientX - offset.current.x,
                 y: newClientY - offset.current.y,
             });
+            updatePosition();
         },
         [isDragging, currentWidth, currentHeight]
     );
