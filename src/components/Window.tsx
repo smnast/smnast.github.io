@@ -26,7 +26,7 @@ const Window: React.FC<WindowProps> = ({ title, windowWidth, windowHeight, child
         const x = (window.innerWidth - currentWidth) / 2 + relativePosition.current.x;
         let y = (window.innerHeight - currentHeight) / 2 + relativePosition.current.y;
 
-        const titleBarHeight = 35; // Adjust if needed
+        const titleBarHeight = 35;
         if (y < 0) y = 0;
         else if (y > window.innerHeight - titleBarHeight) {
             y = window.innerHeight - titleBarHeight;
