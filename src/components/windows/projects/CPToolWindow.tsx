@@ -9,11 +9,13 @@ interface CPToolWindowProps {
 }
 
 const CPToolWindow: React.FC<CPToolWindowProps> = (props) => {
-    const commands = `$ cpt
-Invalid usage:
+    const commands = `$ cpt help
+Usage: cpt <commands> [args]
+cpt help
 cpt problem <name>
 cpt contest <num_problems> <name>
-cpt template <name>`
+cpt template <name>
+--extension=<ext> or -e=<ext> to specify file extension`;
 
     return (
         <Window title="CPTool" windowWidth={1000} windowHeight={700} {...props}>
@@ -29,7 +31,7 @@ cpt template <name>`
                 and entire contests.
             </p>
             <p>
-                Competitive programmers often start with a template, and <strong>cp-tool</strong> makes that easy by 
+                Competitive programmers often start with a template, and cp-tool makes that easy by 
                 allowing users to specify a template file, which is copied into each new solution.
             </p>
             <p>
@@ -40,10 +42,13 @@ cpt template <name>`
             <p>
                 Here are all the available commands:
             </p>
-            <CodeBlock text={commands} language="bash" showLineNumbers={false} theme={zenburn} />
+            <CodeBlock text={commands} language="text" showLineNumbers={false} theme={zenburn} />
             <p>
-                A future improvement would be to offer a proper installation method—such as with <strong>CMake</strong> or
-                a package manager—rather than relying on users to manually symlink files to their <code>bin</code> directory.
+                Additionally, I utilized GitHub Actions to automate the process of publishing cp-tool to PyPI.
+                So installation is as simple as <code>pip install cptool-py</code>.
+            </p>
+            <p>
+                I may support other platforms in the future, but for now, cp-tool is only available for Linux.
             </p>
         </div>
         </Window>
