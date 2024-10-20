@@ -9,7 +9,7 @@ interface SynthScriptWindowProps {
 }
 
 const SynthScriptWindow: React.FC<SynthScriptWindowProps> = (props) => {
-    const wordsInFileSample = `function count_words_in_file(file_path) {
+    const wordsInFileSample = `count_words_in_file <- function(file_path) {
     file_text <- read(file_path)
     current_word <- ""
     word_count <- 0
