@@ -19,6 +19,7 @@ const ProjectsWindow: React.FC<ProjectsWindowProps> = ({ onClose, onClick, onPro
                     <ul>
                         <li>Custom programming language</li>
                         <li>Written in C++</li>
+                        <li>Tested with doctest and GitHub Actions</li>
                     </ul>
                 </li>
                 <li>

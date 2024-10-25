@@ -64,7 +64,11 @@ output(a = 2) # true`;
                 </p>
                 <CodeBlock text={wordsInFileSample} language="R" theme={zenburn} />
                 <p>
-                    A significant improvement to consider for this language is the incorporation of a testing framework, such as <strong>doctest</strong>. This addition would help ensure that the language functions correctly and can be effectively utilized for larger projects. For instance, tests for small features of SynthScript, such as functions returning values, could be added to verify that the program behaves as expected.
+                    SynthScript also includes testing using <b>doctest</b>. This was a significant improvement to the stability of the language, as it caught many bugs that appeared during early development.
+                    It uses <b>GitHub Actions</b> for continuous integration, which automatically runs the test suite on a gamut of compilation environments for every push to the repository.
+                </p>
+                <p>
+                    The project is unlikely to be maintained at this point, since the language is not intended for practical use. However, it was a valuable learning experience in language design and implementation, and I practiced my testing skills by writing a comprehensive test suite.
                 </p>
             </div>
         </Window>
