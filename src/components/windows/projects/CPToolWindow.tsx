@@ -6,6 +6,7 @@ interface CPToolWindowProps {
     onClose: () => void;
     onClick: () => void;
     zIndex: number;
+    focused: boolean;
 }
 
 const CPToolWindow: React.FC<CPToolWindowProps> = (props) => {

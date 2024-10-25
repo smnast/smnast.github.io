@@ -31,6 +31,10 @@ const App: React.FC = () => {
         return windowOrder.indexOf(windowName) + 1;
     };
 
+    const isFocused = (windowName: WindowName) => {
+        return windowOrder[windowOrder.length - 1] === windowName;
+    }
+
     const bringToFront = (windowName: WindowName) => {
         setWindowOrder((prevOrder) => {
             const newOrder = prevOrder.filter((name) => name !== windowName);
@@ -60,6 +64,7 @@ const App: React.FC = () => {
                 onClose={() => closeWindow(windowName)}
                 onClick={() => bringToFront(windowName)}
                 zIndex={getZIndex(windowName)}
+                focused={isFocused(windowName)}
                 {...additionalProps}
             />
         ) : null;

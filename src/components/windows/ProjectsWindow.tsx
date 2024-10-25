@@ -7,11 +7,12 @@ interface ProjectsWindowProps {
     onClick: () => void;
     onProjectClick: (projectName: ProjectName) => void;
     zIndex: number;
+    focused: boolean;
 }
 
-const ProjectsWindow: React.FC<ProjectsWindowProps> = ({ onClose, onClick, onProjectClick, zIndex }) => {
+const ProjectsWindow: React.FC<ProjectsWindowProps> = ({ onClose, onClick, onProjectClick, zIndex, focused }) => {
     return (
-        <Window title="Projects" windowWidth={500} windowHeight={500} onClose={onClose} onClick={onClick} zIndex={zIndex}>
+        <Window title="Projects" windowWidth={500} windowHeight={500} onClose={onClose} onClick={onClick} zIndex={zIndex} focused={focused}>
             <p>Here are some of my projects...</p>
             <ul className="project-list">
                 <li>

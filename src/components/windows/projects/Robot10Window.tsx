@@ -6,6 +6,7 @@ interface Robot10WindowProps {
     onClose: () => void;
     onClick: () => void;
     zIndex: number;
+    focused: boolean;
 }
 
 const Robot10Window: React.FC<Robot10WindowProps> = (props) => {

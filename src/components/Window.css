@@ -1,6 +1,5 @@
 .xp-container {
     position: absolute;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add drop shadow */
     display: flex;
     flex-direction: column;
     max-width: 80%;

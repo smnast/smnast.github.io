@@ -7,6 +7,7 @@ interface HueMasterWindowProps {
     onClose: () => void;
     onClick: () => void;
     zIndex: number;
+    focused: boolean;
 }
 
 const HueMasterWindow: React.FC<HueMasterWindowProps> = (props) => {

@@ -9,9 +9,10 @@ interface WindowProps {
     onClose: () => void;
     onClick: () => void;
     zIndex: number;
+    focused: boolean;
 }
 
-const Window: React.FC<WindowProps> = ({ title, windowWidth, windowHeight, children, onClose, onClick, zIndex }) => {
+const Window: React.FC<WindowProps> = ({ title, windowWidth, windowHeight, children, onClose, onClick, zIndex, focused }) => {
     const [position, setPosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
     const [isDragging, setIsDragging] = useState(false);
     const [initialized, setInitialized] = useState(false);
@@ -141,7 +142,7 @@ const Window: React.FC<WindowProps> = ({ title, windowWidth, windowHeight, child
             document.removeEventListener('touchend', handleTouchEnd);
         };
     }, [handleMouseMove, handleMouseUp]);
-    
+
     return (
         <div
             className="xp-container"
@@ -152,6 +153,7 @@ const Window: React.FC<WindowProps> = ({ title, windowWidth, windowHeight, child
                 width: `${windowWidth}px`,
                 height: `${windowHeight}px`,
                 zIndex,
+                boxShadow: focused ? '0 4px 8px rgba(0, 0, 0, 0.4)' : '0 4px 8px rgba(0, 0, 0, 0.1)',
                 opacity: initialized ? 1 : 0,
                 transition: 'opacity 0.1s ease-in-out',
             }}

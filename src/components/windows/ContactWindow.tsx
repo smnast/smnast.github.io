@@ -6,6 +6,7 @@ interface WelcomeWindowProps {
     onClose: () => void;
     onClick: () => void;
     zIndex: number;
+    focused: boolean;
 }
 
 const WelcomeWindow: React.FC<WelcomeWindowProps> = (props) => {

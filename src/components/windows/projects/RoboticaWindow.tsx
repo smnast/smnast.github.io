@@ -7,6 +7,7 @@ interface RoboticaWindowProps {
     onClose: () => void;
     onClick: () => void;
     zIndex: number;
+    focused: boolean;
 }
 
 const RoboticaWindow: React.FC<RoboticaWindowProps> = (props) => {

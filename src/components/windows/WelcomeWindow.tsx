@@ -4,12 +4,13 @@ import Window from '../Window';
 interface WelcomeWindowProps {
     onClose: () => void;
     onClick: () => void;
-    zIndex: number;
     onProjectsClick: () => void;
     onContactClick: () => void;
+    zIndex: number;
+    focused: boolean;
 }
 
-const WelcomeWindow: React.FC<WelcomeWindowProps> = ({ onClose, onClick, zIndex, onProjectsClick, onContactClick }) => {
+const WelcomeWindow: React.FC<WelcomeWindowProps> = ({ onClose, onClick, onProjectsClick, onContactClick, zIndex, focused }) => {
     const birthDate = new Date(2006, 11, 15, 10, 0, 0);
     const currentDate = new Date();
     const diffTime = Math.abs(currentDate.getTime() - birthDate.getTime());
@@ -18,7 +19,7 @@ const WelcomeWindow: React.FC<WelcomeWindowProps> = ({ onClose, onClick, zIndex,
     const tropicalYears = (diffDays / 365.2422).toFixed(3);
 
     return (
-        <Window title="Welcome!" windowWidth={600} windowHeight={400} onClose={onClose} onClick={onClick} zIndex={zIndex}>
+        <Window title="Welcome!" windowWidth={600} windowHeight={400} onClose={onClose} onClick={onClick} zIndex={zIndex} focused={focused}>
             <p>
                 Hello! I am Simon Ashton, a {gregorianYears}-year-old
                 {tropicalYears !== gregorianYears && ` (${tropicalYears} in tropical years)`} programmer living in Canada.

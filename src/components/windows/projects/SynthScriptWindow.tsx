@@ -6,6 +6,7 @@ interface SynthScriptWindowProps {
     onClose: () => void;
     onClick: () => void;
     zIndex: number;
+    focused: boolean;
 }
 
 const SynthScriptWindow: React.FC<SynthScriptWindowProps> = (props) => {
