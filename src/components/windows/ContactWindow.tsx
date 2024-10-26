@@ -9,7 +9,7 @@ interface WelcomeWindowProps {
     focused: boolean;
 }
 
-const WelcomeWindow: React.FC<WelcomeWindowProps> = (props) => {
+const ContactWindow: React.FC<WelcomeWindowProps> = (props) => {
     return (
         <Window title="Contact" windowWidth={600} windowHeight={380} {...props}>
             <p>
@@ -55,4 +55,4 @@ const WelcomeWindow: React.FC<WelcomeWindowProps> = (props) => {
     );
 }
 
-export default WelcomeWindow;
+export default ContactWindow;

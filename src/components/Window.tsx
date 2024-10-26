@@ -10,9 +10,11 @@ interface WindowProps {
     onClick: () => void;
     zIndex: number;
     focused: boolean;
+    padding?: string;
+    maxSize?: string;
 }
 
-const Window: React.FC<WindowProps> = ({ title, windowWidth, windowHeight, children, onClose, onClick, zIndex, focused }) => {
+const Window: React.FC<WindowProps> = ({ title, windowWidth, windowHeight, children, onClose, onClick, zIndex, focused, padding, maxSize }) => {
     const [position, setPosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
     const [isDragging, setIsDragging] = useState(false);
     const [initialized, setInitialized] = useState(false);
@@ -152,6 +154,8 @@ const Window: React.FC<WindowProps> = ({ title, windowWidth, windowHeight, child
                 top: `${position.y}px`,
                 width: `${windowWidth}px`,
                 height: `${windowHeight}px`,
+                maxWidth: maxSize || '80%',
+                maxHeight: maxSize || '80%',
                 zIndex,
                 boxShadow: focused ? '0 4px 8px rgba(0, 0, 0, 0.4)' : '0 4px 8px rgba(0, 0, 0, 0.1)',
                 opacity: initialized ? 1 : 0,
@@ -166,7 +170,7 @@ const Window: React.FC<WindowProps> = ({ title, windowWidth, windowHeight, child
                 <button className="xp-close-button" onClick={onClose}>&#x00D7;</button>
             </div>
             <div className="xp-window">
-                <div className="xp-content">{children}</div>
+                <div className="xp-content" style={{ padding: padding || '10px' }}>{children}</div>
             </div>
         </div>
     );

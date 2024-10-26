@@ -10,6 +10,15 @@ body {
     height: 100%;
 }
 
+#root, #view {
+    height: 100%;
+}
+
+#view {
+    display: flex;
+    flex-direction: row;
+}
+
 .link {
     cursor: pointer;
     color: #0029F5;

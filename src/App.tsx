@@ -7,10 +7,13 @@ import HueMasterWindow from './components/windows/projects/HueMasterWindow';
 import Robot10Window from './components/windows/projects/Robot10Window';
 import RoboticaWindow from './components/windows/projects/RoboticaWindow';
 import CPToolWindow from './components/windows/projects/CPToolWindow';
+import WelcomeIcon from './components/icons/WelcomeIcon';
+import MinesweeperIcon from './components/icons/MinesweeperIcon';
 import './App.css';
+import MinesweeperWindow from './components/windows/minesweeper/MinesweeperWindow';
 
 type ProjectName = 'SynthScript' | 'HueMaster' | 'Robot10' | 'Robotica' | 'CPTool';
-type WindowName = 'welcome' | 'projects' | 'contact' | ProjectName;
+type WindowName = 'welcome' | 'projects' | 'contact' | 'minesweeper' | ProjectName;
 
 // Main App component
 const App: React.FC = () => {
@@ -18,6 +21,7 @@ const App: React.FC = () => {
         welcome: true,
         projects: false,
         contact: false,
+        minesweeper: false,
         SynthScript: false,
         HueMaster: false,
         Robot10: false,
@@ -26,6 +30,9 @@ const App: React.FC = () => {
     });
 
     const [windowOrder, setWindowOrder] = useState<WindowName[]>([]);
+
+    const [selectedIcon, setSelectedIcon] = useState<WindowName | null>(null);
+    const [firstSelection, setFirstSelection] = useState<boolean>(false);
 
     const getZIndex = (windowName: WindowName) => {
         return windowOrder.indexOf(windowName) + 1;
@@ -70,12 +77,42 @@ const App: React.FC = () => {
         ) : null;
     };
 
+    const isIconSelected = (iconName: WindowName) => {
+        return selectedIcon === iconName;
+    }
+
+    const handleIconClick = (iconName: WindowName) => {
+        if (firstSelection && iconName === selectedIcon) {
+            openWindow(iconName);
+        } else {
+            setFirstSelection(true);
+        }
+
+        setSelectedIcon(iconName);
+        setTimeout(() => {
+            setFirstSelection(false);
+        }, 200);
+    };
+
+    const renderIcon = (IconComponent: React.FC<any>, iconName: WindowName) => {
+        return (
+            <IconComponent
+                selected={isIconSelected(iconName)}
+                onClick={(e: React.MouseEvent) => {
+                    e.stopPropagation();
+                    handleIconClick(iconName);
+                }}
+            />
+        );
+    }
+
     return (
-        <>
+        <div id="view" onClick={() => setSelectedIcon(null)}>
             {renderWindow(WelcomeWindow, 'welcome', {
                 onProjectsClick: () => openWindow('projects'),
                 onContactClick: () => openWindow('contact'),
             })}
+            {renderWindow(MinesweeperWindow, 'minesweeper')}
             {renderWindow(ProjectsWindow, 'projects', {
                 onProjectClick: (projectName: ProjectName) => openWindow(projectName as WindowName),
             })}
@@ -85,7 +122,10 @@ const App: React.FC = () => {
             {renderWindow(Robot10Window, 'Robot10')}
             {renderWindow(RoboticaWindow, 'Robotica')}
             {renderWindow(CPToolWindow, 'CPTool')}
-        </>
+
+            {renderIcon(WelcomeIcon, 'welcome')}
+            {renderIcon(MinesweeperIcon, 'minesweeper')}
+        </div>
     );
 };
 
