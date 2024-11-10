@@ -15,8 +15,8 @@ const WelcomeWindow: React.FC<WelcomeWindowProps> = ({ onClose, onClick, onProje
     const currentDate = new Date();
     const diffTime = Math.abs(currentDate.getTime() - birthDate.getTime());
     const diffDays = diffTime / (1000 * 60 * 60 * 24);
-    const gregorianYears = (diffDays / 365.2425).toFixed(3);
-    const tropicalYears = (diffDays / 365.2422).toFixed(3);
+    const gregorianYears = (Math.floor((diffDays / 365.2425) * 1000) / 1000).toFixed(3);
+    const tropicalYears = (Math.floor((diffDays / 365.2422) * 1000) / 1000).toFixed(3);
 
     return (
         <Window title="Welcome!" windowWidth={600} windowHeight={400} onClose={onClose} onClick={onClick} zIndex={zIndex} focused={focused}>
