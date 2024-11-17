@@ -53,6 +53,14 @@ const ProjectsWindow: React.FC<ProjectsWindowProps> = ({ onClose, onClick, onPro
                         <li>Written in Python and Bash</li>
                     </ul>
                 </li>
+                <li>
+                    <span className="project-item link" onClick={() => {onProjectClick('Portfolio')}}>Portfolio</span>
+                    <ul>
+                        <li>This portfolio website</li>
+                        <li>Written in TypeScript and CSS</li>
+                        <li>Uses the React JS library</li>
+                    </ul>
+                </li>
             </ul>
         </Window>
     );

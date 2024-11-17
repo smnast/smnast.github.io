@@ -1,19 +1,31 @@
-import React, { useState } from 'react';
-import WelcomeWindow from './components/windows/WelcomeWindow';
-import ProjectsWindow from './components/windows/ProjectsWindow';
-import ContactWindow from './components/windows/ContactWindow';
-import SynthScriptWindow from './components/windows/projects/SynthScriptWindow';
-import HueMasterWindow from './components/windows/projects/HueMasterWindow';
-import Robot10Window from './components/windows/projects/Robot10Window';
-import RoboticaWindow from './components/windows/projects/RoboticaWindow';
-import CPToolWindow from './components/windows/projects/CPToolWindow';
-import WelcomeIcon from './components/icons/WelcomeIcon';
-import MinesweeperIcon from './components/icons/MinesweeperIcon';
-import './App.css';
-import MinesweeperWindow from './components/windows/minesweeper/MinesweeperWindow';
+import React, { useState } from "react";
+import WelcomeWindow from "./components/windows/WelcomeWindow";
+import ProjectsWindow from "./components/windows/ProjectsWindow";
+import ContactWindow from "./components/windows/ContactWindow";
+import SynthScriptWindow from "./components/windows/projects/SynthScriptWindow";
+import HueMasterWindow from "./components/windows/projects/HueMasterWindow";
+import Robot10Window from "./components/windows/projects/Robot10Window";
+import RoboticaWindow from "./components/windows/projects/RoboticaWindow";
+import CPToolWindow from "./components/windows/projects/CPToolWindow";
+import MinesweeperWindow from "./components/windows/minesweeper/MinesweeperWindow";
+import PortfolioWindow from "./components/windows/projects/PortfolioWindow";
+import WelcomeIcon from "./components/icons/WelcomeIcon";
+import MinesweeperIcon from "./components/icons/MinesweeperIcon";
+import "./App.css";
 
-type ProjectName = 'SynthScript' | 'HueMaster' | 'Robot10' | 'Robotica' | 'CPTool';
-type WindowName = 'welcome' | 'projects' | 'contact' | 'minesweeper' | ProjectName;
+type ProjectName =
+    | "SynthScript"
+    | "HueMaster"
+    | "Robot10"
+    | "Robotica"
+    | "CPTool"
+    | "Portfolio";
+type WindowName =
+    | "welcome"
+    | "projects"
+    | "contact"
+    | "minesweeper"
+    | ProjectName;
 
 // Main App component
 const App: React.FC = () => {
@@ -27,6 +39,7 @@ const App: React.FC = () => {
         Robot10: false,
         Robotica: false,
         CPTool: false,
+        Portfolio: false,
     });
 
     const [windowOrder, setWindowOrder] = useState<WindowName[]>([]);
@@ -40,7 +53,7 @@ const App: React.FC = () => {
 
     const isFocused = (windowName: WindowName) => {
         return windowOrder[windowOrder.length - 1] === windowName;
-    }
+    };
 
     const bringToFront = (windowName: WindowName) => {
         setWindowOrder((prevOrder) => {
@@ -65,7 +78,11 @@ const App: React.FC = () => {
         }));
     };
 
-    const renderWindow = (WindowComponent: React.FC<any>, windowName: WindowName, additionalProps = {}) => {
+    const renderWindow = (
+        WindowComponent: React.FC<any>,
+        windowName: WindowName,
+        additionalProps = {}
+    ) => {
         return windows[windowName] ? (
             <WindowComponent
                 onClose={() => closeWindow(windowName)}
@@ -79,7 +96,7 @@ const App: React.FC = () => {
 
     const isIconSelected = (iconName: WindowName) => {
         return selectedIcon === iconName;
-    }
+    };
 
     const handleIconClick = (iconName: WindowName) => {
         if (firstSelection && iconName === selectedIcon) {
@@ -104,27 +121,29 @@ const App: React.FC = () => {
                 }}
             />
         );
-    }
+    };
 
     return (
         <div id="view" onClick={() => setSelectedIcon(null)}>
-            {renderWindow(WelcomeWindow, 'welcome', {
-                onProjectsClick: () => openWindow('projects'),
-                onContactClick: () => openWindow('contact'),
+            {renderWindow(WelcomeWindow, "welcome", {
+                onProjectsClick: () => openWindow("projects"),
+                onContactClick: () => openWindow("contact"),
             })}
-            {renderWindow(MinesweeperWindow, 'minesweeper')}
-            {renderWindow(ProjectsWindow, 'projects', {
-                onProjectClick: (projectName: ProjectName) => openWindow(projectName as WindowName),
+            {renderWindow(MinesweeperWindow, "minesweeper")}
+            {renderWindow(ProjectsWindow, "projects", {
+                onProjectClick: (projectName: ProjectName) =>
+                    openWindow(projectName as WindowName),
             })}
-            {renderWindow(ContactWindow, 'contact')}
-            {renderWindow(SynthScriptWindow, 'SynthScript')}
-            {renderWindow(HueMasterWindow, 'HueMaster')}
-            {renderWindow(Robot10Window, 'Robot10')}
-            {renderWindow(RoboticaWindow, 'Robotica')}
-            {renderWindow(CPToolWindow, 'CPTool')}
+            {renderWindow(ContactWindow, "contact")}
+            {renderWindow(SynthScriptWindow, "SynthScript")}
+            {renderWindow(HueMasterWindow, "HueMaster")}
+            {renderWindow(Robot10Window, "Robot10")}
+            {renderWindow(RoboticaWindow, "Robotica")}
+            {renderWindow(CPToolWindow, "CPTool")}
+            {renderWindow(PortfolioWindow, "Portfolio")}
 
-            {renderIcon(WelcomeIcon, 'welcome')}
-            {renderIcon(MinesweeperIcon, 'minesweeper')}
+            {renderIcon(WelcomeIcon, "welcome")}
+            {renderIcon(MinesweeperIcon, "minesweeper")}
         </div>
     );
 };

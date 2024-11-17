@@ -31,7 +31,7 @@ const RoboticaWindow: React.FC<RoboticaWindowProps> = (props) => {
                     In total, I dedicated three months to importing new parts and implementing core functionalities. However, due to time constraints, the project was rushed, leading to various challenges later on.
                 </p>
                 <p>
-                    Key features of <strong>Robotica</strong> include a transform tool for repositioning parts and a move tool that enables users to quickly snap components together.
+                    Key features of Robotica include a transform tool for repositioning parts and a move tool that enables users to quickly snap components together.
                 </p>
                 <img
                     src={roboticaSnap}
@@ -39,7 +39,7 @@ const RoboticaWindow: React.FC<RoboticaWindowProps> = (props) => {
                     style={{ width: "80%" }}
                 />
                 <p>
-                    <strong>Robotica</strong> also incorporates automatic grouping of parts, based on a system involving "fasteners," "inserts," and "holes."
+                    Robotica also incorporates automatic grouping of parts, based on a system involving "fasteners," "inserts," and "holes."
                 </p>
                 <img
                     src={roboticaGroup}
@@ -47,7 +47,7 @@ const RoboticaWindow: React.FC<RoboticaWindowProps> = (props) => {
                     style={{ width: "80%" }}
                 />
                 <p>
-                    The main improvements of <strong>Robotica</strong> over <a className="link" href="https://protobot.web.app/">Protobot</a> include significantly enhanced performance (often achieving 10 times the framerate),
+                    The main improvements of Robotica over <a className="link" href="https://protobot.web.app/">Protobot</a> include significantly enhanced performance (often achieving 10 times the framerate),
                     faster load times, an expanded parts library, more consistent automatic grouping, manual grouping capabilities, reliable saving and loading functionality, and a <i>substantial</i> increase in settings.
                 </p>
                 <p>
