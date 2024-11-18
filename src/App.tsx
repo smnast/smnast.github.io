@@ -4,6 +4,7 @@ import ProjectsWindow from "./components/windows/ProjectsWindow";
 import ContactWindow from "./components/windows/ContactWindow";
 import SynthScriptWindow from "./components/windows/projects/SynthScriptWindow";
 import HueMasterWindow from "./components/windows/projects/HueMasterWindow";
+import KiokuWindow from "./components/windows/projects/Kioku";
 import Robot10Window from "./components/windows/projects/Robot10Window";
 import RoboticaWindow from "./components/windows/projects/RoboticaWindow";
 import CPToolWindow from "./components/windows/projects/CPToolWindow";
@@ -16,6 +17,7 @@ import "./App.css";
 type ProjectName =
     | "SynthScript"
     | "HueMaster"
+    | "Kioku"
     | "Robot10"
     | "Robotica"
     | "CPTool"
@@ -36,6 +38,7 @@ const App: React.FC = () => {
         minesweeper: false,
         SynthScript: false,
         HueMaster: false,
+        Kioku: false,
         Robot10: false,
         Robotica: false,
         CPTool: false,
@@ -137,6 +140,7 @@ const App: React.FC = () => {
             {renderWindow(ContactWindow, "contact")}
             {renderWindow(SynthScriptWindow, "SynthScript")}
             {renderWindow(HueMasterWindow, "HueMaster")}
+            {renderWindow(KiokuWindow, "Kioku")}
             {renderWindow(Robot10Window, "Robot10")}
             {renderWindow(RoboticaWindow, "Robotica")}
             {renderWindow(CPToolWindow, "CPTool")}

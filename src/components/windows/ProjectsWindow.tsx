@@ -32,6 +32,14 @@ const ProjectsWindow: React.FC<ProjectsWindowProps> = ({ onClose, onClick, onPro
                     </ul>
                 </li>
                 <li>
+                    <span className="project-item link" onClick={() => {onProjectClick('Kioku')}}>Kioku</span>
+                    <ul>
+                        <li>Reinforcement learning research</li>
+                        <li>Written in Python</li>
+                        <li>Uses NumPy, PyTorch, and other libraries</li>
+                    </ul>
+                </li>
+                <li>
                     <span className="project-item link" onClick={() => {onProjectClick('Robot10')}}>Robot10</span>
                     <ul>
                         <li>VEX Robotics autonomous and driver code</li>
