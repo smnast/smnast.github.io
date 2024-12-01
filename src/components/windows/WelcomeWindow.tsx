@@ -18,10 +18,13 @@ const WelcomeWindow: React.FC<WelcomeWindowProps> = ({ onClose, onClick, onProje
     const gregorianYears = (Math.floor((diffDays / 365.2425) * 1000) / 1000).toFixed(3);
     const tropicalYears = (Math.floor((diffDays / 365.2422) * 1000) / 1000).toFixed(3);
 
+    const integerYears = Math.floor(diffDays / 365.2425);
+    const article = [8, 11, 18, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89].includes(integerYears) ? 'an' : 'a'; // assuming i don't live for >799 years...
+
     return (
         <Window title="Welcome!" windowWidth={600} windowHeight={400} onClose={onClose} onClick={onClick} zIndex={zIndex} focused={focused}>
             <p>
-                Hello! I am Simon Ashton, a {gregorianYears}-year-old
+                Hello! I am Simon Ashton, {article} {gregorianYears}-year-old
                 {tropicalYears !== gregorianYears && ` (${tropicalYears} in tropical years)`} programmer living in Canada.
                 Please feel free to look around my website and check out some of my projects!
             </p>
